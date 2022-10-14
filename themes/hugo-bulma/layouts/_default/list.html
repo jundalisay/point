@@ -27,9 +27,9 @@
               <img src="{{ .Params.banner }} {{ .Params.image }}" alt="{{ .Title }}">              
             </figure>
           </div>
-          <div class="card-content">
-            <small style="color: silver">{{ .Params.heading }}</small>          
+          <div class="card-content">          
             <h2 class="title is-5">{{ .Title }}</h2>
+            <small style="color: silver">{{ .Params.description }}</small>            
 
           </div>
         </div>
@@ -53,6 +53,7 @@
             <div class="card-content">
               <small style="color: gray">{{ .Params.heading }}</small>                      
               <h2 class="title is-5">{{ .Title }}</h2>
+            <small style="color: gray">{{ .Params.description }}</small>              
             </div>
           </div>
         </a>
