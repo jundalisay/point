@@ -58,6 +58,7 @@
               {{ else }}
               <div class="navbar-end">
               {{ end }}
+
                   {{ $baseURL := urls.Parse $page.Site.Params.baseURL }}
                   {{ range $page.Site.Menus.navbar }} 
                       {{ $item := . }}
@@ -101,7 +102,7 @@
                   <div class="navbar-end">
                       <div class="navbar-item has-dropdown is-hoverable">
                           <a class="navbar-link is-active">
-                            <span class="has-text-white">{{ $page.Language.LanguageName }}</span>
+                            <span class="has-text-dark">{{ $page.Language.LanguageName }}</span>
                           </a>
                           <div class="navbar-dropdown is-right{{ if $isBoxed }} is-boxed{{ end }}">
                               {{ range .Translations }}

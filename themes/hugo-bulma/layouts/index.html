@@ -14,7 +14,7 @@
 </style>
 
 
-<div class="feature text-center columns is-mobile is-multiline my-5">
+<div class="feature text-center columns is-mobile is-multiline my-5 pb-5">
     <div class="column is-12-touch is-4-desktop">
     </div>
     <div class="column is-12-touch is-8-desktop">    
@@ -27,7 +27,7 @@
 </div>
 
 
-<section class="section container"> 
+<section class="section container pt-5"> 
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "promo") }}
       <div class="column is-12-touch is-4-desktop">
@@ -195,7 +195,7 @@
 
 <section class="section container"> 
   <div class="has-text-centered columns is-mobile is-multiline">
-    {{ range first 3 (where .Site.RegularPages "Type" "health") }}
+    {{ range first 3 (where .Site.RegularPages "Type" "science") }}
       <div class="column is-12-touch is-4-desktop">
         <a href="{{ .Permalink }}">
           <div class="card zoom">
