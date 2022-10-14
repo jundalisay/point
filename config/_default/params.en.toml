@@ -4,9 +4,9 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
 
 [latests]
     [latests.a]
-        title = "Alibaba 2022"
+        title = "Alibaba's First Cloud Day on October 19, 2022"
         # url = "/maharlika/economics/maharlika-2050"
-        img = "/icons/alibaba.png"
+        img = "/graphics/alibaba.jpg"
 
 
 # [books.a]
