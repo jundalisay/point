@@ -1,0 +1,48 @@
+{{ $page := . }}
+
+{{ $isEnabled := $page.Params.widgets.content.isEnabled | default $page.Site.Params.widgets.content.isEnabled | default false }}
+{{ $isBannerEnabled := $page.Params.widgets.content.isBannerEnabled | default $page.Site.Params.widgets.content.isBannerEnabled | default false }}
+{{ $isCategoriesEnabled := $page.Params.widgets.content.isCategoriesEnabled | default $page.Site.Params.widgets.content.isCategoriesEnabled | default false }}
+{{ $isTagsEnabled := $page.Params.widgets.content.isTagsEnabled | default $page.Site.Params.widgets.content.isTagsEnabled | default false }}
+
+{{ if $isEnabled }}
+    {{ if or (and $isBannerEnabled $page.Params.banner) $page.Content }}
+        
+        <section class="section widget-content">
+            <div class="container">
+                <article class="content">
+                    {{ if $page.Content }}
+                        {{ if .Params.heading }}
+                            <small style="color: gray">{{ .Params.heading }}</small>                    
+                        {{ end }}
+                        {{ if .Params.subtitle }}
+                            <small style="color: gray">{{ .Params.subtitle }}</small>                    
+                        {{ end }}                        
+                        <div class="mb-6">
+                            <h1 class="title is-3"> {{ $page.Title }}
+                                {{ if .Params.icon }}
+                                    <img src="{{ .Params.icon }}" style="right: 0; position: absolute ;height: 30px" alt="Icon">
+                                {{ else }}
+                                {{ end }}
+                            </h1>
+                            {{ with .Params.date }}
+                                <small style="color: gray">{{ .Format "January 2, 2006" }}</small>                  
+                            {{ end }}                          
+                            {{ with .Params.author }}
+                                <small style="color: gray"> | {{ . }}</small>                  
+                            {{ end }}                                                        
+                        </div>
+
+                        {{ $page.Content |  safeHTML }}
+                        
+                    {{ end }}
+                        
+
+
+
+                </article>
+            </div>
+        </section>
+    {{ end }}
+{{ end }}
+

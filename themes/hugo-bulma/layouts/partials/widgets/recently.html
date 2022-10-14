@@ -1,0 +1,93 @@
+<section class="section">
+  {{ partial "widgets/categories.html" . }}
+
+  {{ partial "widgets/tags.html" .  }}
+
+  <h4 class="title is-6 mt-6 mb-4">Comments</h4>
+
+  {{ if .Params.comments }}
+    {{ range .Params.comments }}
+      <div class="field box has-addons mb-4">
+        <div class="has-addons-left">
+          <figure class="image zoom-xs is-48x48">
+            <img src="{{ .img }}" alt="Avatar" class="is-rounded">
+          </figure>
+        </div>
+        <div class="ml-2">
+          <small>
+            {{ .content }}
+          </small>
+          <span class="h">
+            {{ .commentdate }}
+          </span>          
+        </div>        
+      </div>
+
+    {{ end }}
+  {{ else }}    
+    <div class="field has-addons mb-4">
+      <div class="has-addons-left">
+        <figure class="image is-48x48">
+          <img src="/avatars/blank.png" alt="Avatar" class="is-rounded">
+        </figure>
+      </div>
+      <div class="ml-4">
+        <small style="color: darkslategray;">
+          No comments yet. Post a comment in the form at the bottom. 
+        </small>
+      </div>        
+    </div>
+  {{ end }}
+
+
+
+  <h4 class="title is-6 mt-6 mb-4">{{ i18n "latest_articles"}}</h4>
+
+  {{ range .Site.Params.latests }}    
+    <a href="{{ .Url }}">
+      <div class="field has-addons mb-4">
+        <div class="has-addons-left">
+          <figure class="image zoom-xs">
+            <img src="{{ .Img }}" alt="{{ .Title }}" style="width: 100px !important; height: 50px !important">
+          </figure>
+        </div>
+        <div class="">
+          <h5 class="title is-6 ml-4">
+            {{ .Title }}
+          </h5>
+        </div>        
+      </div>
+    </a>
+  {{ end }}
+
+
+  <div class="h">Sponsors</h4>
+     
+  {{ range .Site.Params.spon }}    
+      <a href="{{ .Url }}">
+        <img src="{{ .Img }}" >
+      </a>
+  {{ end }}
+
+
+  <div class="has-text-centered h mt-4">
+  
+    <a href="https://www.facebook.com/superphysicsorg" style="color: gray !important">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="gray" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+      Superphysics
+    </a>
+
+    {{ if .Params.fb }}
+
+      <a href="{{ .Params.fb }}" class="mx-4" style="color: gray !important">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="gray" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+        {{ .Params.fbname }}
+      </a>
+
+    {{ end }}
+
+  </div>
+
+</section>
+

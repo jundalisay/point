@@ -1,0 +1,118 @@
+{{ $page := . }}
+
+{{ $isEnabled := $page.Params.widgets.header.isEnabled | default $page.Site.Params.widgets.header.isEnabled | default false }}
+{{ $isFixedTop := $page.Params.widgets.header.isFixedTop | default $page.Site.Params.widgets.header.isFixedTop | default false }}
+{{ $isTransparent := $page.Params.widgets.header.isTransparent | default $page.Site.Params.widgets.header.isTransparent | default false }}
+{{ $isSpaced := $page.Params.widgets.header.isSpaced | default $page.Site.Params.widgets.header.isSpaced | default false }}
+{{ $hasShadow := $page.Params.widgets.header.hasShadow | default $page.Site.Params.widgets.header.hasShadow | default false }}
+{{ $hasTextWeightBold := $page.Params.widgets.header.hasTextWeightBold | default $page.Site.Params.widgets.header.hasTextWeightBold | default false }}
+{{ $backgroundColor := $page.Params.widgets.header.backgroundColor | default $page.Site.Params.widgets.header.backgroundColor | default "" }}
+{{ $logoIsEnabled := $page.Params.widgets.header.logo.isEnabled | default $page.Site.Params.widgets.header.logo.isEnabled | default false }}
+{{ $logoWidth := strings.TrimSuffix "px" ($page.Params.widgets.header.logo.width | default $page.Site.Params.widgets.header.logo.width) | default "" }}
+{{ $logoHeight := strings.TrimSuffix "px" ($page.Params.widgets.header.logo.height | default $page.Site.Params.widgets.header.logo.height) | default "" }}
+{{ if and (eq $logoWidth "") (eq $logoHeight "") }}
+  {{ $logoIsEnabled = false }}
+{{ end }}
+
+{{ $class := "" }}
+{{ if $isFixedTop }}
+  {{ $class = printf "%s %s" $class "is-fixed-top" }}
+{{ end }}
+{{ $isBoxed := false }}
+{{ if $isTransparent }}
+  {{ $class = printf "%s %s" $class "is-transparent" }}
+  {{ $isBoxed = true }}
+{{ end }}
+{{ if $isSpaced }}
+  {{ $class = printf "%s %s" $class "is-spaced" }}
+{{ end }}
+{{ if $hasShadow }}
+  {{ $class = printf "%s %s" $class "has-shadow" }}
+{{ end }}
+{{ with $backgroundColor }}
+  {{ if in (slice "primary" "link" "info" "success" "warning" "danger" "black" "dark" "light" "white") . }}
+      {{ $class = printf "%s is-%s" $class . }}
+  {{ else }}
+      {{ $message := printf "shortcodes/icon: invalid value %q for parameter `color`" . }}
+      {{ partial "functions/error.html" (dict "context" $page "message" $message) }}
+  {{ end }}
+{{ end }}
+
+  <nav class="navbar{{ with $class }}{{ . }}{{ end }}" role="navigation" aria-label="{{ i18n "widget_header_navigation" }}" style="background-color: transparent !important; max-height: 50px !important; min-height: 50px !important;">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{{ "/" | relLangURL }}" title="{{ $page.Site.Params.title | default $page.Site.Title }}">
+          <img src="/logo.png" height="50px">
+        </a>
+        <script async src="https://cse.google.com/cse.js?cx=777d4df046ab823ed"></script>
+        <div class="gcse-search"></div>
+        <a role="button" class="navbar-burger" data-target="menu-navbar" aria-label="{{ i18n "widget_header_menu" }}" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+      </div>
+          <div class="navbar-menu" id="menu-navbar">
+              {{ if $page.Site.IsMultiLingual }}
+              <div class="navbar-start">
+              {{ else }}
+              <div class="navbar-end">
+              {{ end }}
+                  {{ $baseURL := urls.Parse $page.Site.Params.baseURL }}
+                  {{ range $page.Site.Menus.navbar }} 
+                      {{ $item := . }}
+                      {{ $isActive := $page.HasMenuCurrent "navbar" $item }}
+                      {{ $currentURL := urls.Parse $item.URL }}
+                      {{ $href := $item.URL | relLangURL }}
+                      {{ if in $item.URL "://" }}
+                          {{ $href = $item.URL | safeURL }}
+                      {{ end }}
+                      {{ $pre := $item.Pre | safeHTML | emojify }}
+                      {{ $name := $item.Name | safeHTML | emojify }}
+                      {{ if $item.HasChildren }}
+                        <div class="navbar-item has-dropdown is-hoverable">
+                          <a class="navbar-link{{ if $hasTextWeightBold }} has-text-weight-bold{{ end }}{{ if $isActive }} is-active{{ end }}" href="{{ $href }}" >
+                            {{ $pre }}<span style="color: gray !important">{{ $name }}</span>
+                          </a>
+                          <div class="navbar-dropdown">
+                            {{ range $item.Children }}
+                              {{ $item := . }}
+                              {{ $isActive := $page.HasMenuCurrent "navbar" $item }}
+                              {{ $pre := $item.Pre | safeHTML | emojify }}
+                              <a class="navbar-item {{ if $isActive }} is-active{{ end }}" href="{{ $item.URL | relLangURL }}">
+                                <div class="control has-icons-left">
+                                  <span class="ml-6">{{ $item.Name }}</span>
+                                  <span class="icon is-left">{{ $pre }}</span>
+                                </div>
+                              </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                      {{ else }}
+                          <a class="navbar-item{{ if $hasTextWeightBold }} has-text-weight-bold{{ end }}{{ if $isActive }} is-active{{ end }}" 
+                              href="{{ $href }}">
+                              {{ $pre }} {{ $item.Name }}
+                          </a>
+                      {{ end }}
+                  {{ end }}
+              </div>
+
+              {{ if $page.IsTranslated }}
+                  <div class="navbar-end">
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a class="navbar-link is-active">
+                            <span class="has-text-white">{{ $page.Language.LanguageName }}</span>
+                          </a>
+                          <div class="navbar-dropdown is-right{{ if $isBoxed }} is-boxed{{ end }}">
+                              {{ range .Translations }}
+                                  <a class="navbar-item {{ if $hasTextWeightBold }} has-text-weight-bold{{ end }}" href="{{ .RelPermalink }}">
+                                      {{ .Language.LanguageName }}
+                                  </a>
+                              {{ end }}
+                          </div>
+                      </div>
+                  </div>
+              {{ end }}
+          </div>
+      </div>
+  </nav>

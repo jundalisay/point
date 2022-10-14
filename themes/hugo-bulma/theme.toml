@@ -1,0 +1,22 @@
+name = "Hugo Bulma"
+description = "Hugo theme based on Bulma"
+version = "0.11.0"
+homepage = "https://github.com/wayn3h0/hugo-bulma"
+license = "Apache-2.0"
+licenselink = "https://github.com/wayn3h0/hugo-bulma/blob/master/LICENSE.md"
+min_version = "0.71.0"
+
+tags = ["bulma", 
+        "responsive", 
+        "personal", 
+        "company", 
+        "blog", 
+        "multilingual",
+        "simple",
+        "modern"]
+
+features = []
+
+[author]
+    name = "Wayne Ho"
+    homepage = "https://github.com/wayn3h0"

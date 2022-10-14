@@ -1,0 +1,148 @@
+<!-- this is tags index -->
+
+{{ $page := . }}
+
+{{ $isEnabled := $page.Params.widgets.children.isEnabled | default $page.Site.Params.widgets.children.isEnabled | default false }}
+{{ $dateFormat := $page.Params.widgets.children.dateFormat | default $page.Site.Params.widgets.children.dateFormat | default "2006-01-02" }}
+
+{{ $pageSize := $page.Params.widgets.children.pageSize | default $page.Site.Params.widgets.children.pageSize | default $page.Site.Params.paginate }}
+{{ $numberOfRecordsPerRow := $page.Params.widgets.children.numberOfRecordsPerRow | default $page.Site.Params.widgets.children.numberOfRecordsPerRow | default 4 }}
+
+{{ $style := $page.Params.widgets.children.style | default $page.Site.Params.widgets.children.style | default 1 }}
+
+{{ $isDateEnabled := $page.Params.widgets.children.isDateEnabled | default $page.Site.Params.widgets.children.isDateEnabled | default false }}
+{{ $isAuthorEnabled := $page.Params.widgets.children.isAuthorEnabled | default $page.Site.Params.widgets.children.isAuthorEnabled | default false }}
+{{ $isCategoriesEnabled := $page.Params.widgets.children.isCategoriesEnabled | default $page.Site.Params.widgets.children.isCategoriesEnabled | default false }}
+{{ $isTagsEnabled := $page.Params.widgets.children.isTagsEnabled | default $page.Site.Params.widgets.children.isTagsEnabled | default false }}
+
+{{ if $isEnabled }}
+    {{ $pages := ($page.Paginator $pageSize).Pages }}  
+
+    {{ if or (eq $style 1) (eq $style 2) }}
+        <section class="section widget-children">
+            <div class="container">
+            {{ range $item :=  $pages }}
+                <article class="box">
+                    <header>
+                        <h3 class="title"><a href="{{ $item.Params.externalLink | default $item.RelPermalink }}" title="{{ $item.Title | default $item.LinkTitle }}">{{ $item.LinkTitle }}</a></h3>
+                        {{ if or $isDateEnabled $isAuthorEnabled }}
+                            <div class="field is-grouped is-grouped-multiline">
+                                {{ if $isDateEnabled }}
+                                    <div class="control">
+                                        <div class="tags has-addons">
+                                            <span class="tag is-primary"><i class="fas fa-calendar-day"></i></span>
+                                            <span class="tag"><time pubdate>{{ $item.Date.Format $dateFormat }}</time></span>
+                                        </div>
+                                    </div>
+                                {{ end }}
+                                
+                            </div>
+                        {{ end }}
+                    </header>
+                    <hr>
+                    <div class="my-5">
+                        {{ if $item.Params.image }}
+                            {{ if eq $style 1 }}
+                                <a href="{{ $item.Params.externalLink | default $item.RelPermalink }}" title="{{ $item.Title | default $item.LinkTitle }}">
+                                    <img src="{{ $item.Params.image | relURL }}" alt="{{ $item.Title | default $item.LinkTitle }}">
+                                </a>
+                                <div class="is-clearfix">
+                                    <p class="pt-2">{{ $item.Params.summary | default $item.Summary }}</p>
+                                    <div class="is-pulled-right pt-4">
+                                        <a class="button is-link is-outlined" title="{{ i18n "widget_children_read_more" }}" href="{{ $item.Params.externalLink | default $item.RelPermalink }}">{{ i18n "widget_children_read_more" }}</a>
+                                    </div>
+                                </div>
+                            {{ else if eq $style 2 }}
+                                <div class="columns">
+                                    <div class="column is-4">
+                                        <a href="{{ $item.Params.externalLink | default $item.RelPermalink }}" title="{{ $item.Title | default $item.LinkTitle }}">
+                                            <img src="{{ $item.Params.image | relURL }}" alt="{{ $item.Title | default $item.LinkTitle }}">
+                                        </a>
+                                    </div>
+                                    <div class="column is-clearfix">
+                                        <p>{{ $item.Params.summary | default $item.Summary }}</p>
+                                        <div class="is-pulled-right pt-4">
+                                            <a class="button is-link is-outlined" title="{{ i18n "widget_children_read_more" }}" href="{{ $item.Params.externalLink | default $item.RelPermalink }}">{{ i18n "widget_children_read_more" }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{ end }}
+                        {{ else }}
+                            <div class="is-clearfix">
+                                <p>{{ $item.Params.summary | default $item.Summary }}</p>
+                                <div class="is-pulled-right">
+                                    <a class="button is-link is-outlined" title="{{ i18n "widget_children_read_more" }}" href="{{ $item.Params.externalLink | default $item.RelPermalink }}">{{ i18n "widget_children_read_more" }}</a>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                    {{ if or $isCategoriesEnabled $isTagsEnabled }}
+                        <hr >
+                        <footer>
+                            {{ if $isCategoriesEnabled }}
+                                {{ partial "widgets/categories.html" $item }}
+                            {{ end }}
+                            {{ if $isTagsEnabled }}
+                                {{ partial "widgets/tags.html" $item }}
+                            {{ end }}
+                        </footer>
+                    {{ end }}
+                </article>
+            {{ end }}
+            </div>
+        </section>
+        {{ template "_internal/pagination.html" . }}  
+
+    {{ else if eq $style 3}}
+        <section class="section widget-children">
+            <div class="container">
+            {{ range $index, $item := ($page.Paginator $pageSize).Pages }}
+                {{ if eq (mod $index $numberOfRecordsPerRow) 0 }}
+                    <div class="tile is-ancestor">
+                {{ end }}
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                {{ if $item.Params.image }}
+                                    <a href="{{ $item.Params.externalLink | default $item.RelPermalink }}" title="{{ $item.Title | default $item.LinkTitle }}">
+                                        <img class="banner" src="{{ $item.Params.image | relURL }}" alt="{{ $item.Title | default $item.LinkTitle }}">
+                                    </a>
+                                    <h3 class="title is-6 pt-2"><a href="{{ $item.Params.externalLink | default $item.RelPermalink }}" title="{{ $item.Title | default $item.LinkTitle }}">{{ $item.LinkTitle }}</a></h3></header>
+                                {{ else }}
+                                    <h3 class="title is-6"><a href="{{ $item.Params.externalLink | default $item.RelPermalink }}" title="{{ $item.Title | default $item.LinkTitle }}">{{ $item.LinkTitle }}</a></h3>
+                                    <p class="subtitle is-7">{{ $item.Params.summary | default $item.Summary }}</p>
+                                {{ end }}
+
+                                {{ if or (or (or $isDateEnabled $isAuthorEnabled) $isCategoriesEnabled) $isTagsEnabled }}
+                                    <hr />
+                                    <footer>
+                                        {{ if or $isDateEnabled $isAuthorEnabled }}
+                                        <div class="field is-grouped is-grouped-multiline">
+                                            {{ if $isDateEnabled }}
+                                            <div class="control">
+                                                <div class="tags has-addons">
+                                                    <span class="tag is-primary"><i class="fas fa-calendar-day"></i></span>
+                                                    <span class="tag"><time pubdate>{{ $item.Date.Format $dateFormat }}</time></span>
+                                                </div>
+                                            </div>
+                                            {{ end }}
+                                        </div>
+                                        {{ end }}
+                                        {{ if $isCategoriesEnabled }}
+                                            {{ partial "widgets/categories.html" $item }}
+                                        {{ end }}
+                                        {{ if $isTagsEnabled }}
+                                            {{ partial "widgets/tags.html" $item }}
+                                        {{ end }}
+                                    </footer>
+                                {{ end }}
+                            </article>
+                        </div>
+                {{ if eq (mod (add $index 1) $numberOfRecordsPerRow) 0 }}
+                    </div>
+                {{ end }}
+            {{ end }}
+            </div>
+        </section>
+  {{ template "_internal/pagination.html" . }}  
+    {{ end }}
+{{ end }}

@@ -1,0 +1,81 @@
+<footer class="footer section has-background-black has-text-light px-4">
+  <div class="container">
+
+    <h4 class="title is-3 has-text-white">We'd Love Your Comment!</h4>
+
+    <form method="post" action="{{ site.Params.contact_form }}" class="mb-6">
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-6-desktop is-12-touch">
+          <div class="field h">
+            Your Name
+            <div class="control is-expanded has-icons-left">
+              <input class="input" name="email[name]" id="name">
+              <span class="icon is-left">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='gray' class='p-2'><path d='M528 32H48C21.5 32 0 53.5 0 80v16h576V80c0-26.5-21.5-48-48-48zM0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V128H0v304zm352-232c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zm0 64c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zm0 64c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zM176 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zM67.1 396.2C75.5 370.5 99.6 352 128 352h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.9-5.2 19.8-15.6 19.8H82.7c-10.4 0-18.8-10-15.6-19.8z'/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6-desktop is-12-touch">
+          <div class="field h">
+            Your Avatar (optional)
+            <div class="control is-expanded has-icons-left">
+              <input class="input" name="email[avatar]" id="avatar">
+              <span class="icon is-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill='gray' class='p-2'><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM112 223.4c3.3-42.1 32.2-71.4 56-71.4s52.7 29.3 56 71.4c.7 8.6-10.8 11.9-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.3 7.4-15.8 4-15.1-4.5zm250.8 122.8C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.5-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.6-16.2 38.1 4.3 24.6 20.5zm6.2-118.3l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.1 7.3-15.6 4-14.9-4.5 3.3-42.1 32.2-71.4 56-71.4s52.7 29.3 56 71.4c.6 8.6-11 11.9-15.1 4.5z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="column is-12-desktop is-12-touch">
+          <div class="field h">
+            <div class="control">
+              <textarea name="email[content]" id="comment" rows="6" class="textarea"></textarea>
+              <input name="email[address]" id="source" type="hidden" value="{{ .Permalink }}">                         
+            </div>
+          </div>
+        </div>
+        <div class="column is-12-desktop is-12-touch h">          
+          Your Email (optional)
+          <div class="control is-expanded has-icons-left">
+            <input class="input" name="email[email]" id="email">
+            <span class="icon is-left">                
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="gray" class="p-2"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+            </span>
+          </div>          
+        </div> 
+      </div>
+      <div class="buttons">
+        <button type="submit" class="button is-warning">Send</button>
+        <button type="reset" class="button is-dark">Clear</button>
+      </div>          
+    </form>
+
+
+    <h4 class="title is-3 has-text-white mt-6">Subscribe</h4>
+
+<!--         <form method="post" action=""> -->
+    <form method="post" action="{{ site.Params.contact_form }}">
+      <div class="field h">
+        Your Email
+        <div class="control is-expanded has-icons-left">
+          <input class="input" name="email[email]" id="email">
+          <span class="icon is-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="gray" class="p-2"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+          </span>
+          <input name="email[address]" id="source" type="hidden" value="{{ .Permalink }}">                         
+        </div>          
+      </div>
+      <div class="buttons">
+        <button type="submit" class="button is-warning">Send</button>
+        <button type="reset" class="button is-dark">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="has-text-centered mt-6">
+    <small>{{ site.Params.Copyright | markdownify }}</small>
+  </div>
+</div>
+
+</footer>

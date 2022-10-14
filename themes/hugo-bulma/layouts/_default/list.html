@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+{{ $page := . }}
+
+{{ $rows := $page.Params.templates.list.rows | default $page.Site.Params.templates.list.rows | default slice }}
+
+<main class="main" role="main">
+
+<!-- <div class="has-text-centered h mt-5 mb-2" style="color: silver;">Featured</div> -->
+<section class="section container">
+
+  <div class="has-text-centered">  
+    <h1 class="title is-2 has-text-dark">{{ .Title }}</h1>
+    <h2 class="subtitle is-3 has-text-light">{{ .Params.subtitle }}</h2>
+  </div>
+
+
+  <div class="columns is-multiline is-mobile p-4">  
+    {{ range (where .Data.Pages "Type" "featured") }}
+
+      
+    <div class="column is-4-desktop is-12-touch">
+      <a href="{{ .Permalink }}" title="{{ .Title }}">
+        <div class="card card-equal-height zoom-xs">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="{{ .Params.banner }} {{ .Params.image }}" alt="{{ .Title }}">              
+            </figure>
+          </div>
+          <div class="card-content">
+            <small style="color: silver">{{ .Params.heading }}</small>          
+            <h2 class="title is-5">{{ .Title }}</h2>
+
+          </div>
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+    
+  <div class="columns is-multiline is-mobile p-4">
+    {{ $paginator := .Paginate  (where .Data.Pages "Type" "!=" "featured") }}
+    {{ range $paginator.Pages }}
+      <div class="column is-3-desktop is-6-touch">
+        <a href="{{ .Permalink }}" title="{{ .Title }}">
+          <div class="card card-equal-height zoom-xs">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="{{ .Params.banner }} {{ .Params.image }}" alt="{{ .Title }}">              
+              </figure>
+            </div>
+            <div class="card-content">
+              <small style="color: gray">{{ .Params.heading }}</small>                      
+              <h2 class="title is-5">{{ .Title }}</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+      
+  <div class="container my-2 has-text-centered">
+    {{ template "_internal/pagination.html" . }}  
+  </div>
+
+</section>
+</main>
+
+{{ end }}

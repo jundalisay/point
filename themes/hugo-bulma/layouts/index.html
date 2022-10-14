@@ -1,0 +1,221 @@
+{{ define "main" }}
+{{ $page := . }}
+
+<main class="main" role="main">
+
+<style type="text/css">
+  .feature {
+    background: #000 url("{{ .Params.banner }}") center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+  }
+</style>
+
+
+<div class="feature text-center columns is-mobile is-multiline my-5">
+    <div class="column is-12-touch is-4-desktop">
+    </div>
+    <div class="column is-12-touch is-8-desktop">    
+      <div class="card p-3 has-text-centered" style="opacity: 0.9" >
+        <h2 class="title is-2 py-2">{{ .Params.title | markdownify }}</h2>
+        <div class="subtitle is-5 pb-2">{{ .Params.subtitle | markdownify }}</div>
+        <a href="{{ .Params.link }}" class="button is-fullwidth is-warning">{{ .Params.linktext | markdownify }}</a>        
+      </div>
+    </div>
+</div>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "promo") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "competitions") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "business") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "startups") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "retail") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "cyber") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "food") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "government") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="section container"> 
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "health") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+
+</main>
+
+{{ end }}
+

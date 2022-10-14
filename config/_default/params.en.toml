@@ -1,0 +1,239 @@
+isQuirksMode = true     # set value to true will throw error as warning when building site, or as error
+
+contact_form =  "https://hub.pantrypoints.com/api/email"
+
+[latests]
+    [latests.a]
+        title = "Alibaba 2022"
+        # url = "/maharlika/economics/maharlika-2050"
+        img = "/icons/alibaba.png"
+
+
+# [books.a]
+#     url = ""
+#     img = "/books/spmat.jpg"
+# [books.b]
+#     url = ""
+#     img = "/books/spmed.jpg"
+# [books.c]
+#     url = ""
+#     img = "/books/spsoc.jpg"
+# [books.d]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_Towards_Maharlika?id=T-H4DwAAQBAJ"
+#     img = "/books/towards.jpg"
+
+
+# [simp.a]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Wealth_of_Nations_by_Ad?id=BjnPDwAAQBAJ"
+#     img = "/books/w1.jpg"
+# [simp.b]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Wealth_of_Nations_by_Ad?id=0iHMDwAAQBAJ"
+#     img = "/books/w2.jpg"
+# [simp.c]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Wealth_of_Nations_by_Ad?id=WyYAEAAAQBAJ"
+#     img = "/books/w5.jpg"
+# [simp.d]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Treatise_of_Human_Natur?id=iF_XDwAAQBAJ"
+#     img = "/books/t1.jpg"
+# [simp.e]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Treatise_of_Human_Natur?id=nZjqDwAAQBAJ"
+#     img = "/books/t2.jpg"
+# [simp.f]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Treatise_of_Human_Natur?id=ikj9DwAAQBAJ"
+#     img = "/books/t3.jpg"
+# [simp.g]
+#     url = "https://play.google.com/store/books/details/Juan_Dalisay_Jr_The_Simple_Republic_by_Plato?id=WlkBEAAAQBAJ"
+#     img = "/books/rep.jpg"
+
+
+[spon.a]
+    url = "https://pantrypoints.com/build"
+    img = "/banners/build.jpg"
+[spon.b]
+    url = "https://elivirs.com"
+    img = "/banners/elivirs.jpg"
+[spon.c]
+    url = "https://superphysics.org"
+    img = "/banners/sp.png"
+
+    
+########## Design
+
+[design]
+    isRadiusless = true     # disable radius global if set to `true`
+
+    # https://clrs.cc colors
+    [design.colors]
+        primary = "#0074D9"
+        link    = "#0074D9"
+        info    = "#0074D9"
+        success = "#3D9970"
+        warning = "#FF851B"
+        danger  = "#FF4136"
+        light   = ""
+        dark    = ""
+
+    [design.favicon]
+        path = "/logo.png"    # favicon file should put in `/assets/`
+
+    [design.logo]
+        path = "/logo.png"    # logo file should put in `/assets/`
+
+    [design.brand]
+        title = "The Point"
+        tagline = "Community-based News"
+
+
+########## Widgets
+
+[widgets]
+
+    [widgets.breadcrumb]
+        isEnabled = true
+        separator = ""      # available values: `arrow`,`bullet`,`dot`,`succeeds`, default is `/`
+        alignment = ""      # available values: `centered`,`right`, default show on left
+        size      = ""      # available values: `small`,`medium`,`large`
+
+    [widgets.footer]
+        isEnabled       = true
+        isPaddingless   = true
+
+        [widgets.footer.logo]
+            isEnabled   = true
+            isLink      = false
+            width       = ""        # unit must be px
+            height      = "50px"    # width & height required one at least
+
+        [widgets.footer.backToTop]
+            isEnabled   = true
+            [widgets.footer.backToTop.position]
+                right   = "2rem"
+                bottom  = "2rem"
+            [widgets.footer.backToTop.icon]
+                pack   = "fas"
+                name   = "chevron-circle-up"
+                color  = "primary"
+
+    [widgets.content]
+        isEnabled           = true
+        isBannerEnabled     = false
+        isCategoriesEnabled =  true
+        isTagsEnabled       = true
+
+    [widgets.tableOfContents]
+        isEnabled   = true
+        isSticky    = true
+        top         = "3rem"    # used for sticky, unit must be rem, will calcuate "top" in main.scss by value + design.navbar.height
+
+    [widgets.categories]
+        isEnabled       = true
+        [widgets.categories.icon]
+            isEnabled   = true
+            pack        = "fas"
+            name        = "folder"
+            color       = "primary"
+
+    [widgets.tags]
+        isEnabled       = true
+        [widgets.tags.icon]
+            isEnabled   = true
+            pack        = "fas"
+            name        = "tag"
+            color       = "primary"
+
+    [widgets.children]
+        isEnabled               = true
+        style                   = 3             # available values: 1, 2, 3
+        dateFormat              = "2006-01-02"  # checkout golang time format
+        pageSize                = 12            # overwrite params.paginate
+        numberOfRecordsPerRow   = 3             # for style=3
+        isAuthorEnabled         = true
+        isDateEnabled           = true
+        isCategoriesEnabled     = true
+        isTagsEnabled           = true
+
+
+    [widgets.pagination]
+        alignment   = "centered"    # available values: `centered`,`right`, default show on left
+        style       = "rounded"    # available values: `rounded`
+        size        = "small"    # available values: `small`,`medium`,`large` 
+
+    [widgets.recently]
+        isEnabled               = true
+        sections                = ["documentation"]
+        numberOfRecords         = 6
+        isVertical              = false
+        numberOfRecordsPerRow   = 3     # for horizontal view; the value should <= numberOfRecords
+
+    [widgets.related]
+        isEnabled               = true
+        sections                = ["documentation"]
+        numberOfRecords         = 6
+        isVertical              = true
+        numberOfRecordsPerRow   = 3     # for horizontal view; the value should <= numberOfRecords
+
+    [widgets.allCategories]
+        isEnabled = true
+        [widgets.allCategories.count]
+            isEnabled = false
+            color = "info"
+
+    [widgets.allTags]
+        isEnabled = true
+        [widgets.allTags.count]
+            isEnabled = true
+            color = "info"
+
+    [widgets.error404]
+        isEnabled = true
+
+
+########## Templates
+
+[templates]
+    [templates.list]
+        [templates.list.rows.1]
+            [templates.list.rows.1.columns.full]
+                widgets = ["breadcrumb"]
+        [templates.list.rows.2]
+            [templates.list.rows.2.columns.full]
+                offset = 0
+                width = 12
+                widgets = ["content"]
+        [templates.list.rows.3]
+            [templates.list.rows.3.columns.left]
+                width = 8
+                widgets = ["children"]
+            [templates.list.rows.3.columns.right]
+                width = 4
+                widgets = ["recently", "allcategories", "alltags"]
+    [templates.taxonomy]
+        [templates.taxonomy.rows.1]
+            [templates.taxonomy.rows.1.columns.full]
+                widgets = ["breadcrumb"]
+        [templates.taxonomy.rows.2]
+            [templates.taxonomy.rows.2.columns.left]
+                width = 8
+                widgets = ["children"]
+            [templates.taxonomy.rows.2.columns.right]
+                width = 4
+                widgets = ["allcategories", "alltags", "recently"]
+    [templates.single]
+        [templates.single.rows.1]
+            [templates.single.rows.1.columns.full]
+                widgets = ["breadcrumb"]
+        [templates.single.rows.2]
+            [templates.single.rows.2.columns.left]
+                width = 8
+                widgets = ["content"]
+            [templates.single.rows.2.columns.right]
+                width = 4
+                widgets = ["tableofcontents", "related", "recently"]
+    [templates.error404]
+    [templates.error404.rows.1]
+            [templates.error404.rows.1.columns.full]
+                widgets = ["error404", "recently"]
+    [templates.index.xml]
+        timeFormat = "2006-01-02 15:04:05 +0800"
+
+#################### 

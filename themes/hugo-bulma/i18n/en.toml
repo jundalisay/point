@@ -1,0 +1,60 @@
+[widget_header_navigation]
+other = "Navigation"
+
+[widget_header_menu]
+other = "Menu"
+
+[widget_breadcrumb]
+other = "Breadcrumbs"
+
+[widget_breadcrumb_home]
+other = "Home"
+
+[widget_pagination]
+other = "Pagination"
+
+[widget_pagination_previous]
+other = "Previous"
+
+[widget_pagination_next]
+other = "Next"
+
+[widget_pagination_go_to_page]
+other = "Go To Page {{ .PageNumber }}"
+
+[widget_pagination_current]
+other = "Page {{ .PageNumber }}"
+
+[widget_footer_back_to_top]
+other = "Back To Top"
+
+[widget_table_of_contents]
+other = "On This Page"
+
+[widget_recently]
+other = "Recently"
+
+[latest_articles]
+other = "Upcoming Events"
+
+[widget_related]
+other = "See Also"
+
+[widget_children_read_more]
+other = "Read More"
+
+[widget_all_categories]
+other = "Categories"
+
+[widget_all_tags]
+other = "Tags"
+
+
+[template_error_404]
+other = "Oops! Page Not Found" 
+
+[template_error_404_subtitle]
+other = "The page you are looking for might have been removed had it's name changed or is temporarily unavailable."
+
+[template_error_404_go_to_homepage]
+other = "Go To Homepage"
