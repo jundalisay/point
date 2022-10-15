@@ -14,6 +14,7 @@ startups
 COMMUNITY
 culture
 education
+environment
 tourism
 welfare
 

@@ -26,6 +26,9 @@ $radius-large: 0px;
 
 @import "vendors/bulma/bulma.sass";
 
+.page-link {
+  color: orange !important
+}
 
 .zoom:hover { transform: scale(1.04); transition: 0.1s; -webkit-filter: grayscale(100%); filter: grayscale(100%);}
 

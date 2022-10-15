@@ -1,5 +1,6 @@
 ---
-title: "About"
+title: "About The Point"
+subtitle: "Get to the Point!"
 description: "About The Point"
 image: /logo.png
 ---
@@ -22,4 +23,5 @@ The three decided to collaborate and consolidate their content into The Point in
 
 The Point is designed for people who need information in a hurry. We make our posts as concise as possible and avoid using unnecessary information or irrelevant details. 
 
-As tech people, we rely on The Point ourselves to keep us updated with the latest trends in software, apps, and  technology even for engineering and agriculture. 
+As tech people, we rely on The Point ourselves to keep us updated with the latest trends in software, apps, and technology even for engineering and agriculture. 
+

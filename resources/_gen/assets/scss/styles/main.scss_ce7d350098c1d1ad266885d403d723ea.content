@@ -6574,6 +6574,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.page-link {
+  color: orange !important; }
+
 .zoom:hover {
   transform: scale(1.04);
   transition: 0.1s;
