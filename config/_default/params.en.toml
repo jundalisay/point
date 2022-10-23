@@ -4,9 +4,9 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
 
 [latests]
     [latests.a]
-        title = "Alibaba's First Cloud Day on October 19, 2022"
+        title = "10th Electric Vehicle Summit on October 20, 2022"
         # url = "/maharlika/economics/maharlika-2050"
-        img = "/graphics/alibaba.jpg"
+        img = "/photos/ev.jpg"
 
 
 # [books.a]
