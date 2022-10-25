@@ -6,7 +6,7 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
     [latests.a]
         title = "10th Electric Vehicle Summit on October 20, 2022"
         # url = "/maharlika/economics/maharlika-2050"
-        img = "/photos/ev.jpg"
+        img = "/covers/evsummit.jpg"
 
 
 # [books.a]

@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-12-desktop is-12-touch h">          
+        <div class="column is-6-desktop is-12-touch h">          
           Your Email (optional)
           <div class="control is-expanded has-icons-left">
             <input class="input" name="email[email]" id="email">
@@ -43,7 +43,39 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="gray" class="p-2"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
             </span>
           </div>          
-        </div> 
+        </div>
+        <div class="column is-6-desktop is-12-touch">
+          <div class="field h">
+            Your Interest (optional)
+            <div class="control is-expanded has-icons-left">
+              <div class="select is-fullwidth" name="email[country]" id="hand">
+                <select>
+                  <option>All</option>
+                  <option>Agriculture</option>
+                  <option>Business</option>
+                  <option>Competitions</option>
+                  <option>Crypto</option>
+                  <option>Culture</option>
+                  <option>Cyber</option>
+                  <option>Education</option>
+                  <option>Energy</option>
+                  <option>Environment</option>
+                  <option>Food</option>
+                  <option>Government</option>
+                  <option>Health</option>
+                  <option>Jobs</option>            
+                  <option>Promos</option>
+                  <option>Retail</option>
+                  <option>Science</option>
+                  <option>Startups</option>
+                  <option>Technology</option>
+                  <option>Tourism</option>
+                  <option>Welfare</option>
+                </select>
+              </div>                     
+            </div>
+          </div>
+        </div>
       </div>
       <div class="buttons">
         <button type="submit" class="button is-warning">Send</button>
@@ -52,20 +84,58 @@
     </form>
 
 
-    <h4 class="title is-3 has-text-white mt-6">Subscribe</h4>
+    <h4 class="title is-3 has-text-white mt-6">Subscribe to get notified of upcoming events</h4>
 
 <!--         <form method="post" action=""> -->
     <form method="post" action="{{ site.Params.contact_form }}">
-      <div class="field h">
-        Your Email
-        <div class="control is-expanded has-icons-left">
-          <input class="input" name="email[email]" id="email">
-          <span class="icon is-left">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="gray" class="p-2"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
-          </span>
-          <input name="email[address]" id="source" type="hidden" value="{{ .Permalink }}">                         
-        </div>          
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-6-desktop is-12-touch">
+          <div class="field h">
+            Your Email
+            <div class="control is-expanded has-icons-left">
+              <input class="input" name="email[email]" id="email">
+              <span class="icon is-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="gray" class="p-2"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+              </span>
+              <input name="email[address]" id="source" type="hidden" value="{{ .Permalink }}">                         
+            </div>          
+          </div>
+        </div>
+
+        <div class="column is-6-desktop is-12-touch">
+          <div class="field h">
+            Your Interest
+            <div class="control is-expanded has-icons-left">
+              <div class="select is-fullwidth" name="email[country]" id="hand">
+                <select>
+                  <option>All</option>
+                  <option>Agriculture</option>
+                  <option>Business</option>
+                  <option>Competitions</option>
+                  <option>Crypto</option>
+                  <option>Culture</option>
+                  <option>Cyber</option>
+                  <option>Education</option>
+                  <option>Energy</option>
+                  <option>Environment</option>
+                  <option>Food</option>
+                  <option>Government</option>
+                  <option>Health</option>
+                  <option>Jobs</option>            
+                  <option>Promos</option>
+                  <option>Retail</option>
+                  <option>Science</option>
+                  <option>Startups</option>
+                  <option>Technology</option>
+                  <option>Tourism</option>
+                  <option>Welfare</option>
+                </select>
+              </div>                     
+            </div>
+          </div>
+        </div>      
       </div>
+
       <div class="buttons">
         <button type="submit" class="button is-warning">Send</button>
         <button type="reset" class="button is-dark">Clear</button>
