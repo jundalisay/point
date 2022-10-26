@@ -21,7 +21,9 @@
                         <div class="mb-6">
                             <h1 class="title is-3"> {{ $page.Title }}
                                 {{ if .Params.icon }}
-                                    <img src="{{ .Params.icon }}" style="right: 0; position: absolute ;height: 30px" alt="Icon">
+                                <img src="{{ .Params.icon }}" class="is-rounded" style="right: 0; position: absolute ;height: 30px" alt="Icon">
+<!--                                     <figure class="image is-inline-block">                                   
+                                    </figure> -->
                                 {{ else }}
                                 {{ end }}
                             </h1>
