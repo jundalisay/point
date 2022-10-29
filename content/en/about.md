@@ -10,10 +10,10 @@ image: /logo.png
 
 The lockdowns from the pandemic forced many people to go online.
 
-This was true for Juan, Francis, and Anton who either started their own blogs or joined to write for existing ones. 
+This was true for Juan, Francis, and Lance <!-- Anton --> who either started their own blogs or joined to write for existing ones. 
 
 - Juan blogged about business and economics in his [Superphysics site](https://superphysics.org)
-- Anton <!-- Mondia --> blogged about IT and tech for [Phil IT](https://phil-it.org.ph)
+- Lance <!-- Anton --> <!-- Mondia --> blogged about IT and tech for [Phil IT](https://phil-it.org.ph)
 - Francis blogged about history, culture, and the arts in his Urban Transitioner Facebook page 
 
 The three decided to collaborate and consolidate their content into The Point in order to gain more visibility while increasing the content-quality. 
