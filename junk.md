@@ -1,3 +1,5 @@
+The Point covers all important events that are relevabt for IT, startups, agriculture, business, food, health, education, etc.
+
 March 4, 1918 Kansas - May
 Sept Oct 1918 Phily Boston San Fransisco
 
