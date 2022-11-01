@@ -1,10 +1,10 @@
 ---
-title: "Philippine Web3 Festival"
-banner: "/covers/web3.jpg"
+title: "Vietnam Blockchain Summit 2022"
+banner: "/banners/vbs.jpg"
 # heading: "A New Science Based on Metaphysics and Dialectics"
-subtitle: "Gaganapin sa Marquis Events Place BGC Taguig mula Nobyembre 14-18. $39 pataas ang presyo ng mga tiket"
-linktext: "Tingnan sa Official Site"
-link: "https://www.phweb3festival.com/"
+subtitle: "Tháng Mười 19-20 @ Nobyembre 14-18. $39 pataas ang presyo ng mga tiket"
+linktext: "Thông tin"
+link: "https://vietnamblockchainsummit.com/"
 # link: "/cyber/22-10-25/"
 
 # title: "Alibaba's First Cloud Day on October 19, 2022"

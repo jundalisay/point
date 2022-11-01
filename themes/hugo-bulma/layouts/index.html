@@ -45,8 +45,12 @@
   </div>
 </section>
 
+
 <section class="section container py-5"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Competitions</h2>  
+  {{ range first 1 (where .Site.RegularPages "Type" "competitions") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">{{ i18n "latest_competitions" }}</h2>  
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "competitions") }}
       <div class="column is-12-touch is-4-desktop">
@@ -66,8 +70,12 @@
   </div>
 </section>
 
-<section class="section container py-5"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Startup News</h2>    
+
+<section class="section container py-5">
+  {{range first 1 (where .Site.RegularPages "Type" "startups") }}
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Startup News</h2>    
+  {{end}}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "startups") }}
       <div class="column is-12-touch is-4-desktop">
@@ -86,8 +94,12 @@
 </section>
 
 
+
 <section class="section container py-5"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Web News</h2>      
+  {{range first 1 (where .Site.RegularPages "Type" "cyber") }}
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Web News</h2>      
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "cyber") }}
       <div class="column is-12-touch is-4-desktop">
@@ -107,7 +119,10 @@
 
 
 <section class="section container"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Crypto News</h2>      
+  {{range first 1 (where .Site.RegularPages "Type" "crypto") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Crypto News</h2>      
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "crypto") }}
       <div class="column is-12-touch is-4-desktop">
@@ -129,7 +144,10 @@
 
 
 <section class="section container py-5">
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Tech News</h2>      
+  {{ range first 1 (where .Site.RegularPages "Type" "startups") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Tech News</h2>
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "tech") }}
       <div class="column is-12-touch is-4-desktop">
@@ -150,7 +168,10 @@
 
 
 <section class="section container py-5"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Food News</h2>        
+  {{ range first 1 (where .Site.RegularPages "Type" "food") }}    
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Food News</h2>        
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "food") }}
       <div class="column is-12-touch is-4-desktop">
@@ -168,8 +189,11 @@
   </div>
 </section>
 
-<section class="section container py-5"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Agriculture News</h2>        
+<section class="section container py-5">
+  {{ range first 1 (where .Site.RegularPages "Type" "agri") }}    
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Agriculture News</h2>        
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "agri") }}
       <div class="column is-12-touch is-4-desktop">
@@ -188,7 +212,10 @@
 </section>
 
 <section class="section container"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Environment News</h2>        
+  {{ range first 1 (where .Site.RegularPages "Type" "environment") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Environment News</h2>
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "environment") }}
       <div class="column is-12-touch is-4-desktop">
@@ -211,7 +238,10 @@
 
 
 <section class="section container"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Energy News</h2>      
+  {{ range first 1 (where .Site.RegularPages "Type" "energy") }}    
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Energy News</h2>      
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "energy") }}
       <div class="column is-12-touch is-4-desktop">
@@ -232,11 +262,11 @@
 </section>
 
 
-
-
-
 <section class="section container">
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Science News</h2>        
+  {{ range first 1 (where .Site.RegularPages "Type" "science") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Science News</h2>        
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "science") }}
       <div class="column is-12-touch is-4-desktop">
@@ -256,8 +286,12 @@
   </div>
 </section>
 
+
 <section class="section container"> 
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Business News</h2>        
+  {{ range first 1 (where .Site.RegularPages "Type" "business") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Business News</h2>
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "business") }}
       <div class="column is-12-touch is-4-desktop">
@@ -277,8 +311,12 @@
   </div>
 </section>
 
+
 <section class="section container">
-  <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Retail News</h2>        
+  {{ range first 1 (where .Site.RegularPages "Type" "retail") }}    
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">Latest Retail News</h2>        
+  {{ end }}
+
   <div class="has-text-centered columns is-mobile is-multiline">
     {{ range first 3 (where .Site.RegularPages "Type" "retail") }}
       <div class="column is-12-touch is-4-desktop">
@@ -298,24 +336,12 @@
   </div>
 </section>
 
+<br>
+<br>
+
 <section class="section container"> 
-<!--   <h2 class="subtitle is-3 has-text-centered pb-2 mt-5">Latest Government News</h2>         -->
-  <div class="has-text-centered columns is-mobile is-multiline">
-    {{ range first 3 (where .Site.RegularPages "Type" "government") }}
-      <div class="column is-12-touch is-4-desktop">
-        <a href="{{ .Permalink }}">
-          <div class="card zoom">
-
-            {{ with .Params.image }}
-              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
-            {{ end }}
-
-            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
-            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
-          </div>
-        </a>
-      </div>
-    {{ end }}
+  <div class="content has-text-centered m-5">
+    {{ partial "widgets/cal.html" $page }}    
   </div>
 </section>
 

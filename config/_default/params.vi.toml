@@ -13,7 +13,6 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
         img = "/graphics/bfsi.jpg"
 
 
-
 [spon.a]
     url = "https://pantrypoints.com/build"
     img = "/banners/build.jpg"
@@ -24,6 +23,7 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
     url = "https://superphysics.org"
     img = "/banners/sp.png"
 
+    
 ########## Design
 
 [design]
@@ -41,14 +41,14 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
         dark    = ""
 
     [design.favicon]
-        path = "icons/sp30.png"    # favicon file should put in `/assets/`
+        path = "/logo.png"    # favicon file should put in `/assets/`
 
     [design.logo]
-        path = "icons/sp.png"    # logo file should put in `/assets/`
+        path = "/logo.png"    # logo file should put in `/assets/`
 
     [design.brand]
-        title = "Superphysics"
-        tagline = "A new science"
+        title = "The Point"
+        tagline = "Community-based News"
 
 
 ########## Widgets
@@ -72,7 +72,7 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
             height      = "50px"    # width & height required one at least
 
         [widgets.footer.backToTop]
-            isEnabled   = true 
+            isEnabled   = true
             [widgets.footer.backToTop.position]
                 right   = "2rem"
                 bottom  = "2rem"

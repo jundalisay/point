@@ -1,3 +1,26 @@
+<section class="section container"> 
+  <h2 class="subtitle is-3 has-text-centered pb-2 mt-5">Latest Government News</h2>        
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "government") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card zoom">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+
 The Point covers all important events that are relevabt for IT, startups, agriculture, business, food, health, education, etc.
 
 March 4, 1918 Kansas - May
