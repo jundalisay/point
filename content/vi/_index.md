@@ -2,7 +2,7 @@
 title: "Vietnam Blockchain Summit 2022"
 banner: "/banners/vbs.jpg"
 # heading: "A New Science Based on Metaphysics and Dialectics"
-subtitle: "Tháng Mười 19-20 @ Nobyembre 14-18. $39 pataas ang presyo ng mga tiket"
+subtitle: "Tháng Mười 19-20 @ Vietnam National Convention Center Hanoi"
 linktext: "Thông tin"
 link: "https://vietnamblockchainsummit.com/"
 # link: "/cyber/22-10-25/"

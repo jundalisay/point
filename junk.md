@@ -1,3 +1,12 @@
+.win    186 260
+.bid    186 260
+.party  186 260
+.top    156 261
+.in 983 357
+.work   160 364
+.icu    88  364
+.rodeo  313 364
+
 <section class="section container"> 
   <h2 class="subtitle is-3 has-text-centered pb-2 mt-5">Latest Government News</h2>        
   <div class="has-text-centered columns is-mobile is-multiline">
