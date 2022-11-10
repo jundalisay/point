@@ -8,6 +8,12 @@
 .icu    88  364
 .rodeo  313 364
 
+
+ganache chain
+truffle cli 
+metamask wallet
+
+
 <section class="section container"> 
   <h2 class="subtitle is-3 has-text-centered pb-2 mt-5">Latest Government News</h2>        
   <div class="has-text-centered columns is-mobile is-multiline">
