@@ -53,8 +53,8 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
     url = "https://pantrypoints.com/build"
     img = "/banners/build.jpg"
 [spon.b]
-    url = "https://elivirs.com"
-    img = "/banners/elivirs.jpg"
+    url = "http://himalayanconsultingservices.com/"
+    img = "/banners/hima.jpg"
 [spon.c]
     url = "https://superphysics.org"
     img = "/banners/sp.png"
