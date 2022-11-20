@@ -9,6 +9,10 @@
 .rodeo  313 364
 
 
+http://dccp.ph/events
+https://www.facebook.com/werise.community/
+
+
 ganache chain
 truffle cli 
 metamask wallet
@@ -73,10 +77,6 @@ OTHERS
 govt
 jobs
 promos
-
-
-
-
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Philippine Web3 Festival"
-banner: "/covers/web3.jpg"
+title: "Philippine Blockchain Week 2022"
+banner: "/covers/phbw.jpg"
 # heading: "A New Science Based on Metaphysics and Dialectics"
-subtitle: "The event will be at the Marquis Events Place BGC Taguig from Nov 14-18. Tickets cost $39 upwards"
+subtitle: "The event will be at the Marriot Grand Ballroom at Newport Resorts World. Tickets cost $27.50 upwards"
 linktext: "Read More"
-link: "https://www.phweb3festival.com/"
+link: "https://www.philblockchainweek.com/"
 # link: "/cyber/22-10-25/"
 
 # title: "Alibaba's First Cloud Day on October 19, 2022"
