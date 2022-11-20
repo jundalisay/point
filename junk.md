@@ -11,6 +11,8 @@
 
 http://dccp.ph/events
 https://www.facebook.com/werise.community/
+https://www.smxconventioncenter.com/smx-manila-calendar-of-events/
+
 
 
 ganache chain
