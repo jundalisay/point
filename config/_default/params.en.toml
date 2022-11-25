@@ -5,7 +5,7 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
 [latests]
     [latests.a]
         title = "Philippine Blockchain Week"
-        url = "/cyber/22-11-20/"
+        url = "/crypto/22-11-20/"
         img = "/covers/phbw.jpg"
     # [latests.b]
     #     title = "BFSI Cybersecurity Summit"

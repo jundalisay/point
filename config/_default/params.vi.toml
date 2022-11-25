@@ -4,13 +4,17 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
 
 [latests]
     [latests.a]
-        title = "Philippine Web3 Festival"
-        url = "/cyber/22-10-25/"
-        img = "/covers/web3.jpg"
-    [latests.b]
-        title = "BFSI Cybersecurity Summit"
-        url = "/cyber/22-10-24/"
-        img = "/graphics/bfsi.jpg"
+        title = "Philippine Blockchain Week"
+        url = "/crypto/22-11-20/"
+        img = "/covers/phbw.jpg"
+
+    #     title = "Philippine Web3 Festival"
+    #     url = "/cyber/22-10-25/"
+    #     img = "/covers/web3.jpg"
+    # [latests.b]
+    #     title = "BFSI Cybersecurity Summit"
+    #     url = "/cyber/22-10-24/"
+    #     img = "/graphics/bfsi.jpg"
 
 
 [spon.a]
