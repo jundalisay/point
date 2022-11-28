@@ -13,6 +13,12 @@ http://dccp.ph/events
 https://www.facebook.com/werise.community/
 https://www.smxconventioncenter.com/smx-manila-calendar-of-events/
 
+Alibaba
+1. Ecommerce system
+2. Payments  points
+3. Logistics hub
+
+Alibaba tested during 11/11
 
 
 ganache chain
