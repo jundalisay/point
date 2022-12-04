@@ -4,9 +4,9 @@ contact_form =  "https://hub.pantrypoints.com/api/email"
 
 [latests]
     [latests.a]
-        title = "Philippine Blockchain Week"
-        url = "/crypto/22-11-20/"
-        img = "/covers/phbw.jpg"
+        title = "Techfest 2022"
+        url = "/vi/startups/22-12-01/"
+        img = "/covers/techfest2022.jpg"
 
     #     title = "Philippine Web3 Festival"
     #     url = "/cyber/22-10-25/"

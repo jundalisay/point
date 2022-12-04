@@ -13,18 +13,18 @@
         # keywords = "Superphysics, Physics, Economics, Metaphysics"
         description = "The Point is a concise news site for busy people who needs the important details fast"
 
-[tl]
-    weight          = 2
-    languageCode    = "tl"
-    languageName    = "Tagalog"
-    contentDir      = "content/tl"
-    copyright       = "&copy; The Point. Mula sa [Pantrypoints](https://pantrypoints.com)"
-    title           = "The Point | Diretso sa Punto"
+# [tl]
+#     weight          = 2
+#     languageCode    = "tl"
+#     languageName    = "Tagalog"
+#     contentDir      = "content/tl"
+#     copyright       = "&copy; The Point. Mula sa [Pantrypoints](https://pantrypoints.com)"
+#     title           = "The Point | Diretso sa Punto"
 
-    [tl.params]
-        author = "Pantry Peers"
-        # keywords = "Hugo-Bulma, Hugo, Bulma, 主题"
-        description = "The Point is a concise news site for busy people who needs the important details fast"
+#     [tl.params]
+#         author = "Pantry Peers"
+#         # keywords = "Hugo-Bulma, Hugo, Bulma, 主题"
+#         description = "The Point is a concise news site for busy people who needs the important details fast"
 
 
 [vi]
@@ -32,10 +32,10 @@
     languageCode    = "vi"
     languageName    = "Tieng Viet"
     contentDir      = "content/vi"
-    copyright       = "&copy; The Point. [Pantrypoints](https://pantrypoints.com)"
+    copyright       = "&copy; The Point. Powered by [Pantrypoints](https://pantrypoints.com)"
     title           = "The Point"
 
     [vi.params]
-        author = "Pantry Peers"
+        author = "The Point"
         # keywords = "Hugo-Bulma, Hugo, Bulma, 主题"
         description = "The Point is a concise news site for busy people who needs the important details fast"
