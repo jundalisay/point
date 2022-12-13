@@ -1,10 +1,12 @@
 ---
-title: "National Exporters' Week 2022"
-banner: "/banners/exporters.jpg"
+title: Happy Holidays!
+# title: "National Exporters' Week 2022"
+banner: "/banners/xmaspoint.jpg"
+# card: true
 # heading: "A New Science Based on Metaphysics and Dialectics"
-subtitle: "The exhibit will be at the Marriot Hotel at Newport Resorts World from December 5-6, 2022"
-linktext: "Read More"
-link: "https://www.dti.gov.ph/negosyo/exports/emb-news/dti-emb-feature-ph-exporters-export-enablers-national-exporters-week/"
+# subtitle: "The exhibit will be at the Marriot Hotel at Newport Resorts World from December 5-6, 2022"
+# linktext: "Read More"
+# link: "https://www.dti.gov.ph/negosyo/exports/emb-news/dti-emb-feature-ph-exporters-export-enablers-national-exporters-week/"
 # link: "/cyber/22-10-25/"
 
 # title: "Alibaba's First Cloud Day on October 19, 2022"
