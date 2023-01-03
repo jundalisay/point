@@ -48,6 +48,32 @@
 </section>
 
 
+
+<section class="section container py-5"> 
+  {{ range first 1 (where .Site.RegularPages "Type" "promos") }}  
+    <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">{{ i18n "latest_promos" }}</h2>  
+  {{ end }}
+
+  <div class="has-text-centered columns is-mobile is-multiline">
+    {{ range first 3 (where .Site.RegularPages "Type" "promos") }}
+      <div class="column is-12-touch is-4-desktop">
+        <a href="{{ .Permalink }}">
+          <div class="card">
+
+            {{ with .Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ . }}" class="card-img-top">
+            {{ end }}
+
+            <h3 class="title is-4 mt-4 mx-4">{{ .Title }}</h3>
+            <small class="mx-4 pb-4">{{ .Params.Description }}</small>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
 <section class="section container py-5"> 
   {{ range first 1 (where .Site.RegularPages "Type" "competitions") }}  
     <h2 class="subtitle is-3 has-text-centered pb-2 pt-5">{{ i18n "latest_competitions" }}</h2>  

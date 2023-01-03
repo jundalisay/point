@@ -1,6 +1,11 @@
 [latest_competitions]
 other = "Latest Competitions"
 
+[latest_promos]
+other = "Latest Promos"
+
+
+
 [widget_header_navigation]
 other = "Navigation"
 
