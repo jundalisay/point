@@ -14,20 +14,9 @@
 </style>
 
 
-<div class="feature text-center columns is-mobile is-multiline my-5 pb-5">
-    {{ if .Param "card" }}  
-      <div class="column is-12-touch is-4-desktop">
-      </div>
-      <div class="column is-12-touch is-8-desktop">    
-        <div class="card p-3 has-text-centered" style="opacity: 0.9" >
-          <h2 class="title is-2 py-2">{{ .Params.title | markdownify }}</h2>
-          <div class="subtitle is-5 pb-2">{{ .Params.subtitle | markdownify }}</div>
-          <a href="{{ .Params.link }}" class="button is-fullwidth is-warning">{{ .Params.linktext | markdownify }}</a>        
-        </div>
-      </div>
-    {{ end }}  
-</div>
-
+<a href="{{ .Params.link }}" class="">{{ .Params.linktext | markdownify }}
+<div class="feature text-center columns is-mobile is-multiline my-5 pb-5"></div>
+</a>
 
 <section class="section container py-5"> 
   <div class="has-text-centered columns is-mobile is-multiline">
