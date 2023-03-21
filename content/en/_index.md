@@ -1,12 +1,12 @@
 ---
 # title: Happy Holidays!
 # title: "National Exporters' Week 2022"
-banner: "/banners/worldbex.jpg"
+banner: "/banners/water.jpg"
 # card: true
 # heading: "A New Science Based on Metaphysics and Dialectics"
 # subtitle: "The exhibit will be at the Marriot Hotel at Newport Resorts World from December 5-6, 2022"
 # linktext: "Read More"
-link: "https://worldbex.com/"
+link: "https://www.waterphilippinesexpo.com/"
 # link: "/cyber/22-10-25/"
 
 # title: "Alibaba's First Cloud Day on October 19, 2022"
