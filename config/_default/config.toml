@@ -1,5 +1,4 @@
 baseURL = "https://www.thepoint.click/"
-
 theme = "hugo-bulma"
 googleAnalyticsID = "G-EJ4TJ62CBV"
 
