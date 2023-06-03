@@ -2,12 +2,12 @@
 # title: Happy Holidays!
 # title: "National Exporters' Week 2022"
 # banner: "/banners/sme.jpg"
-banner: "/banners/ifex.jpg"
+banner: "/graphics/book.jpg"
 # card: true
 # heading: "A New Science Based on Metaphysics and Dialectics"
 # subtitle: "The exhibit will be at the Marriot Hotel at Newport Resorts World from December 5-6, 2022"
 # linktext: "Read More"
-link: https://www.facebook.com/ifexphilippines/
+link: http://web.nlp.gov.ph/nlp/?q=node/11421
 # link: "https://www.philsme.com/"
 # link: "/cyber/22-10-25/"
 
