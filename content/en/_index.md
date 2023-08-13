@@ -1,7 +1,7 @@
 ---
 # title: Happy Holidays!
 # title: "National Exporters' Week 2022"
-banner: "/banners/wofex.jpg"
+banner: "/banners/philfit.jpg"
 # banner: "/graphics/climathon23.jpg"
 # card: true
 # heading: "A New Science Based on Metaphysics and Dialectics"
@@ -9,7 +9,7 @@ banner: "/banners/wofex.jpg"
 # linktext: "Read More"
 # link: https://bit.ly/joinclimathonpasig2023
 # link: "https://www.philsme.com/"
-link: "https://www.wofex.com"
+link: "https://philwellfit.com/"
 # title: "Alibaba's First Cloud Day on October 19, 2022"
 # banner: "/graphics/alibaba.jpg"
 # heading: "A New Science Based on Metaphysics and Dialectics"
